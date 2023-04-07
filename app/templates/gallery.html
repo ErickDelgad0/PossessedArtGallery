@@ -1,0 +1,24 @@
+{% extends "gallery-layout.html" %}
+
+{% block body %}
+
+<!-- Search was taken from https://www.w3schools.com/howto/howto_css_search_button.asp -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/gallery.css') }}">
+
+
+<form autocomplete="off" class="search-box" action="/Collection" method="get">
+    <label for="collection"><b>Collection:</b></label>
+    <input type="collection" placeholder="Search a Collection" name="search">
+    <br>
+    <label for="style"><b>Artsyle:</b></label>
+    <input type="style" name="artstyle">
+    <br>
+    <button type="submit">Search</button>
+</form>
+(Artstyles: digital, painting, sculpture, literature, music)
+
+<div class="title">
+    <h1>Art Gallery Timeline</h1>
+</div>
+
+{% endblock %}

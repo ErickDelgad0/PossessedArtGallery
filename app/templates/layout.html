@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/home-style.css') }}">
+    </head>
+
+    <div class="header">
+        <img src="{{ url_for('static', filename='img/Pssssd_banner.png') }}" width="200" height="75" a href="/" class="logo"></a>
+        <div class="header-right">
+        <a class="active" href="/">Home</a>
+        <a href="/register">Register</a>
+        <a href="/login">Sign In</a>
+        </div>
+    </div>
+        <!-- Jinja templating code that we can redefine for other pages -->
+        {% block body %}{% endblock %}
+</html>

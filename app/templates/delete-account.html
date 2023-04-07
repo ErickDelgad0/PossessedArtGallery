@@ -1,0 +1,20 @@
+{% block body %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/delete.css') }}">
+    </head>
+
+    <h1>
+        ARE YOU SURE THAT YOU WANT TO DELETE YOUR ACCOUNT?
+    </h1>
+    <body>
+        <form action="/deleted" method="post">
+            <div class="container">
+                <button type="submit">DELETE</button>
+            </div>
+        </form>
+    </body>
+</html>
+
+{% endblock %}

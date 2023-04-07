@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    
+
+
+<!-- Code for this login page can be found at 
+  https://www.codershubb.com/login-form-in-html-and-css-using-python/ -->
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/library_style.css') }}">
+  </head>
+  
+  <body>
+  <form autocomplete="off" action="/login-check" method="post">
+    <div class="container">
+      <img src="{{ url_for('static', filename='img/pssssd1.png') }}" alt="logo">
+    </div>
+    <div class="container">
+      <label for="uname"><b>Username:</b></label>
+      <input type="text" maxlength="16" placeholder="Enter your username" name="uname" required>
+      <br>
+      <label for="pswdd"><b>Password:</b></label>
+      <input type="password" maxlength="12" placeholder="Enter your password" name="passwd" required>
+      <br>
+      <label>
+        <input type="checkbox" name="remember"> Remember me
+      </label>
+      <br>
+      <button type="submit">Login</button>
+      <br>
+      <span class="pswd"><a href="/rickroll">Forgot password?</a></span>
+    </div>
+  </form>
+  </body>
+  </html>
+
+  {% endblock %}

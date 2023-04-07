@@ -1,0 +1,45 @@
+{% extends "gallery-layout.html" %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/art-submis.css') }}">
+    </head>
+
+    <h1>
+        Upload your artwork and description
+    </h1>
+    <body>
+    <form autocomplete="off" action="/upload-art" method="post">
+        <div class="container">
+            <label for="url"><b>Artwork link:</b></label>
+            <input type="url" placeholder="Enter your artwork link" name="url" link="url" required>
+            <br>
+            <label for="description"><b>Description:</b></label>
+            <input type="description" placeholder="Enter your description" name="description" caption="description" required>
+            <br>
+            <label for="collection"><b>Collection:</b></label>
+            <input type="collection" placeholder="Enter a Collection Name" name="collection" caption="collection" required>
+            <br>
+            
+            <div class="custom-select">
+                <label for="artwork">Art Style:</label>
+                <select name="artstyle" id="Artwork">
+                    <option selected disabled>Choose Artstyle</option>
+                    <option value="digital">Digital</option>
+                    <option value="painting">Painting</option>
+                    <option value="sculpture">Sculpture</option>
+                    <option value="literature">Literature</option>
+                    <option value="music">Music</option>
+                </select>
+            </div>
+            <br>
+            <button type="submit">Upload</button>
+        </div>
+    </form>
+    </body>
+</html>
+
+{% endblock %}
